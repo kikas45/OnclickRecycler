@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1097976706153",
+    "project_id": "onclickrecycler",
+    "storage_bucket": "onclickrecycler.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097976706153:android:39633176586f9e7c1f9ef8",
+        "android_client_info": {
+          "package_name": "com.example.onclickrecycler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097976706153-on13bv26a1k497oa0l5tt173qe5e66n2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs3Khl2BOH4mEqw9nPPqSyN7fW5w8faFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1097976706153-on13bv26a1k497oa0l5tt173qe5e66n2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
