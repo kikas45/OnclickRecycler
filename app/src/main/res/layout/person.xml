@@ -8,7 +8,6 @@
     android:layout_marginHorizontal="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginBottom="20dp"
-    android:background="@drawable/button_design"
     android:scrollbars="vertical"
     app:cardCornerRadius="20dp">
 
@@ -32,6 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:paddingBottom="10dp"
+            android:background="@drawable/button_design"
             android:orientation="vertical"
             tools:targetApi="lollipop">
 
@@ -44,6 +44,18 @@
 
             <TextView
                 android:id="@+id/textView_p"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:text="descriptions"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textView_url"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imageView"

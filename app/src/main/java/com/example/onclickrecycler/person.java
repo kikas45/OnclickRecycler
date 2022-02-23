@@ -2,14 +2,15 @@ package com.example.onclickrecycler;
 
 
 public class person {
- String image, name;
+ String image, name, url;
 
     public person() {
     }
 
-    public person(String image, String name) {
+    public person(String image, String name, String url) {
         this.image = image;
         this.name = name;
+        this.url = url;
     }
 
     public String getImage() {
@@ -26,5 +27,13 @@ public class person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

@@ -10,6 +10,7 @@
     android:layout_marginBottom="20dp"
     tools:context=".ViewActivity"
     android:scrollbars="vertical"
+    android:background="@drawable/button_design"
     app:cardCornerRadius="20dp">
 
 
@@ -30,12 +31,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:paddingBottom="10dp"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:orientation="vertical"
             tools:targetApi="lollipop">
 
             <ImageView
-                android:background="?android:attr/selectableItemBackgroundBorderless"
                 android:id="@+id/imageView_v"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"

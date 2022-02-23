@@ -34,6 +34,7 @@ public class personAdapter extends FirebaseRecyclerAdapter<
      ;
 
         holder.textView_p.setText(model.getName());
+        holder.textView_url.setText(model.getUrl());
 
         Picasso.get().load(model.getImage()).into(holder.imageView);
 
@@ -41,7 +42,7 @@ public class personAdapter extends FirebaseRecyclerAdapter<
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), ViewActivity.class);
+                Intent intent = new Intent(view.getContext(), Browser.class);
                 intent.putExtra("CarKey", getRef(position).getKey());
                 view.getContext().startActivity(intent);
                 // Toast.makeText(view.getContext(), "Good"+    position , Toast.LENGTH_LONG).show();
@@ -64,7 +65,7 @@ public class personAdapter extends FirebaseRecyclerAdapter<
 
     class personsViewholder
             extends RecyclerView.ViewHolder {
-        TextView textView_p;
+        TextView textView_p, textView_url;
         ImageView imageView;
         public personsViewholder(@NonNull View itemView)
         {
@@ -72,6 +73,7 @@ public class personAdapter extends FirebaseRecyclerAdapter<
 
 
             textView_p = itemView.findViewById(R.id.textView_p);
+            textView_url = itemView.findViewById(R.id.textView_url);
             imageView = itemView.findViewById(R.id.imageView_p);
         }
     }
