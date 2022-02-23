@@ -1,42 +1,15 @@
 package com.example.onclickrecycler;
-// Your package name can be different depending
-// on your project name
+
 
 public class person {
- String firstname, lastname, age, image;
+ String image, name;
 
     public person() {
     }
 
-    public person(String firstname, String lastname, String age, String image) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.age = age;
+    public person(String image, String name) {
         this.image = image;
-    }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
+        this.name = name;
     }
 
     public String getImage() {
@@ -45,5 +18,13 @@ public class person {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

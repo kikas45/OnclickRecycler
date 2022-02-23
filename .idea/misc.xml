@@ -3,9 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/Desktop/Andriod Apps/OnClickRecycler/app/src/main/res/drawable/button_design.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/HP/Desktop/Andriod Apps/OnClickRecycler/app/src/main/res/layout/activity_main.xml" value="0.1953125" />
         <entry key="..\:/Users/HP/Desktop/Andriod Apps/OnClickRecycler/app/src/main/res/layout/activity_view.xml" value="0.13802083333333334" />
-        <entry key="..\:/Users/HP/Desktop/Andriod Apps/OnClickRecycler/app/src/main/res/layout/person.xml" value="0.209375" />
+        <entry key="..\:/Users/HP/Desktop/Andriod Apps/OnClickRecycler/app/src/main/res/layout/person.xml" value="0.25" />
       </map>
     </option>
   </component>

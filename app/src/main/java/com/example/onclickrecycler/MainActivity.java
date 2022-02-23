@@ -22,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
+        Utils.getDatabase();
 
         mbase = FirebaseDatabase.getInstance().getReference();
 
@@ -58,5 +59,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         adapter.startListening();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        adapter.stopListening();
+    }
+
+
+    public static class Utils {
+        private static FirebaseDatabase mDatabase;
+
+        public static FirebaseDatabase getDatabase() {
+            if (mDatabase == null) {
+                mDatabase = FirebaseDatabase.getInstance();
+                mDatabase.setPersistenceEnabled(true);
+            }
+            return mDatabase;
+        }
+
     }
 }

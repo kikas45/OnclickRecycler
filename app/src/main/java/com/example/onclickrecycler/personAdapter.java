@@ -31,12 +31,9 @@ public class personAdapter extends FirebaseRecyclerAdapter<
     onBindViewHolder(@NonNull personsViewholder holder, @SuppressLint("RecyclerView") int position, @NonNull person model)
     {
 
-        holder.firstname.setText(model.getFirstname());
+     ;
 
-
-        holder.lastname.setText(model.getLastname());
-
-        holder.age.setText(model.getAge());
+        holder.textView_p.setText(model.getName());
 
         Picasso.get().load(model.getImage()).into(holder.imageView);
 
@@ -47,24 +44,18 @@ public class personAdapter extends FirebaseRecyclerAdapter<
                 Intent intent = new Intent(view.getContext(), ViewActivity.class);
                 intent.putExtra("CarKey", getRef(position).getKey());
                 view.getContext().startActivity(intent);
-
-
                 // Toast.makeText(view.getContext(), "Good"+    position , Toast.LENGTH_LONG).show();
             }
         });
 
 
-
     }
 
-    // Function to tell the class about the Card view (here
-    // "person.xml")in
-    // which the data will be shown
+
     @NonNull
     @Override
     public personsViewholder
-    onCreateViewHolder(@NonNull ViewGroup parent,
-                       int viewType)
+    onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.person, parent, false);
         return new personAdapter.personsViewholder(view);
@@ -73,16 +64,15 @@ public class personAdapter extends FirebaseRecyclerAdapter<
 
     class personsViewholder
             extends RecyclerView.ViewHolder {
-        TextView firstname, lastname, age;
+        TextView textView_p;
         ImageView imageView;
         public personsViewholder(@NonNull View itemView)
         {
             super(itemView);
 
-            firstname = itemView.findViewById(R.id.firstname);
-            lastname = itemView.findViewById(R.id.lastname);
-            age = itemView.findViewById(R.id.age);
-            imageView = itemView.findViewById(R.id.imageView);
+
+            textView_p = itemView.findViewById(R.id.textView_p);
+            imageView = itemView.findViewById(R.id.imageView_p);
         }
     }
 }

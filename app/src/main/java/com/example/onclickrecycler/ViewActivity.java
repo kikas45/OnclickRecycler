@@ -18,8 +18,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class ViewActivity extends AppCompatActivity {
-    TextView  Tage, TlastName, TfirstName;
-    ImageView imageView_c;
+    TextView  TName;
+    ImageView imageView_v;
     DatabaseReference ref;
     private ArrayList<person> messagesList;
     @Override
@@ -29,11 +29,9 @@ public class ViewActivity extends AppCompatActivity {
 
         ref = FirebaseDatabase.getInstance().getReference();
 
-        imageView_c = findViewById(R.id.imageView22);
+        imageView_v = findViewById(R.id.imageView_v);
+        TName = findViewById(R.id.textView_v);
 
-        Tage = findViewById(R.id.Tage);
-        TfirstName = findViewById(R.id.Tfirstname);
-        TlastName = findViewById(R.id.Tlastname);
 
         String CarKey = getIntent().getStringExtra("CarKey");
 
@@ -43,17 +41,14 @@ public class ViewActivity extends AppCompatActivity {
 
                 if (snapshot.exists()){
 
-                    String carName = snapshot.child("firstname").getValue().toString();
-                    String ImageUrl = snapshot.child("lastname").getValue().toString();
-                    String age = snapshot.child("age").getValue().toString();
+
+
+                    String Name = snapshot.child("name").getValue().toString();
                     String image = snapshot.child("image").getValue().toString();
 
-                    Tage.setText(age);
-                    TlastName.setText(ImageUrl);
-                    TfirstName.setText(carName);
-
-                    Picasso.get().load(image).into(imageView_c);
-                    // Now adding the data to image and text viw
+                    //ininliazting them
+                    TName.setText(Name);
+                   Picasso.get().load(image).into(imageView_v);
                 }
             }
 
