@@ -3,6 +3,7 @@ package com.example.onclickrecycler;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -39,31 +40,24 @@ public class Browser extends AppCompatActivity {
 
 
         ref = FirebaseDatabase.getInstance().getReference();
-
         TName = findViewById(R.id.url);
         String CarKey = getIntent().getStringExtra("CarKey");
 
         ref.child(CarKey).addValueEventListener(new ValueEventListener() {
+            @SuppressLint("SetJavaScriptEnabled")
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 if (snapshot.exists()){
-
-
-
                     String Name = snapshot.child("url").getValue().toString();
-                   // String image = snapshot.child("image").getValue().toString();
-
+                    // String image = snapshot.child("image").getValue().toString();
                     //ininliazting them
+
                     TName.setText(Name);
                    // Picasso.get().load(image).into(imageView_v);
 
                     webView = findViewById(R.id.webview);
-
                     webView.loadUrl(Name);
-
-
-
                     webView.getSettings().setJavaScriptEnabled(true);
 
                     // WebViewClient allows you to handle
