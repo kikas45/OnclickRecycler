@@ -43,17 +43,22 @@ public class MainActivity extends AppCompatActivity {
 
       Utils.getDatabase();
 
-        mbase = FirebaseDatabase.getInstance().getReference();
+      mbase = FirebaseDatabase.getInstance().getReference();
 
         recyclerView = findViewById(R.id.recycler1);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+
+        // for grid display
+        /// recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
 
 
         FirebaseRecyclerOptions<person> options
                 = new FirebaseRecyclerOptions.Builder<person>()
                 .setQuery(mbase, person.class)
                 .build();
+
+
 
         /// this will help us get reid of shimmer effect
         mbase.addValueEventListener(new ValueEventListener() {
